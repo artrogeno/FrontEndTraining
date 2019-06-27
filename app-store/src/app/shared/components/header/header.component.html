@@ -8,20 +8,15 @@
     aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
   </button>
   <div class="collapse navbar-collapse" id="collapsibleNavId">
-    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+    <ul class="navbar-nav ml-auto mt-2 mt-lg-0 mr-5">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/', 'store']" [routerLinkActive]="['active']">Store</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" [routerLink]="['/', 'products']" [routerLinkActive]="['active']">Products</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
-          aria-expanded="false">Dropdown</a>
-        <div class="dropdown-menu" aria-labelledby="dropdownId">
-          <a class="dropdown-item" href="#">Action 1</a>
-          <a class="dropdown-item" href="#">Action 2</a>
-        </div>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/', 'not-found']" [routerLinkActive]="['active']">NotFound</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">

@@ -4,9 +4,9 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
     { path: '', redirectTo: '/store', pathMatch: 'full' },
     { path: 'store', loadChildren: './store/store.module#StoreModule' },
-    { path: '**', redirectTo: 'store' }
-    // { path: 'not-found', loadChildren: './not-found/not-found.module#NotFoundModule' },
-    // { path: '**', redirectTo: 'not-found' }
+    { path: 'products', loadChildren: './products/products.module#ProductsModule' },
+    { path: 'not-found', loadChildren: './not-found/not-found.module#NotFoundModule' },
+    { path: '**', redirectTo: 'not-found' }
 ];
 
 @NgModule({
