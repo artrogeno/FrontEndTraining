@@ -1,0 +1,127 @@
+<div class="container-fluid">
+
+  <!-- START: Form Product -->
+  <div class="container bg-white shadow-sm p-5">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="font-weight-light mb-4">Create Product</h2>
+      </div>
+      <div class="col-md-12">
+        <form>
+          <div class="form-row">
+            <div class="col-7">
+              <input type="text" class="form-control" placeholder="Product name">
+            </div>
+            <div class="col">
+              <input type="number" class="form-control" placeholder="Price">
+            </div>
+            <div class="col">
+              <input type="number" class="form-control" placeholder="Sales">
+            </div>
+            <div class="form-check col form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+              <label class="form-check-label text-muted" for="inlineCheckbox1">Active</label>
+            </div>
+            <div class="col">
+              <button type="button" class="btn btn-outline-primary">Create</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- END: Form Product -->
+
+  <!-- START: Table Product -->
+  <div class="container bg-white shadow-sm p-5 mt-4">
+    <div class="row">
+      <div class="col-md-12">
+
+      </div>
+
+      <div class="col-md-12">
+        <table class="table table-products">
+          <thead class="shadow-sm thead-light">
+            <tr>
+              <th scope="col">
+                <input type="checkbox">
+              </th>
+              <th scope="col">Product</th>
+              <th scope="col">Price</th>
+              <th scope="col">Sales</th>
+              <th scope="col">Status</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td scope="row">
+                <input type="checkbox">
+              </td>
+              <td>
+                <div>
+                  <img src="assets/img/products/product-1.jpg" alt="Product" title="Chair" class="rounded mr-3" height="48">
+                  <p class="m-0 d-inline-block align-middle font-16">
+                    <a href="#" class="text-body">Adirondack Chair</a>
+                    <br>
+                    <span class="text-warning fa fa-star"></span>
+                    <span class="text-warning fa fa-star"></span>
+                    <span class="text-warning fa fa-star"></span>
+                    <span class="text-warning fa fa-star"></span>
+                    <span class="text-warning fa fa-star-half-o"></span>
+                  </p>
+                </div>
+              </td>
+              <td>
+                $65.94
+              </td>
+              <td>12%</td>
+              <td>
+                <span class="badge badge-success">Active</span>
+              </td>
+              <td class="table-action">
+                <a href="javascript:void(0);" class="action-icon"> <i class="fa fa-eye"></i></a>
+                <a href="javascript:void(0);" class="action-icon"> <i class="fa fa-edit"></i></a>
+                <a href="javascript:void(0);" class="action-icon"> <i class="fa fa-trash"></i></a>
+              </td>
+            </tr>
+
+            <tr>
+              <td scope="row">
+                <input type="checkbox">
+              </td>
+              <td>
+                <div>
+                  <img src="assets/img/products/product-2.jpg" alt="Product" title="Chair" class="rounded mr-3" height="48">
+                  <p class="m-0 d-inline-block align-middle font-16">
+                    <a href="#" class="text-body">Amazing Modern Chair </a>
+                    <br>
+                    <span class="text-warning fa fa-star"></span>
+                    <span class="text-warning fa fa-star"></span>
+                    <span class="text-warning fa fa-star"></span>
+                    <span class="text-warning fa fa-star"></span>
+                    <span class="text-warning fa fa-star"></span>
+                  </p>
+                </div>
+              </td>
+              <td>
+                $146.66
+              </td>
+              <td>10%</td>
+              <td>
+                <span class="badge badge-danger">Deactive</span>
+              </td>
+              <td class="table-action">
+                <a href="javascript:void(0);" class="action-icon"> <i class="fa fa-eye"></i></a>
+                <a href="javascript:void(0);" class="action-icon"> <i class="fa fa-edit"></i></a>
+                <a href="javascript:void(0);" class="action-icon"> <i class="fa fa-trash"></i></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- END: Table Product -->
+
+</div>
