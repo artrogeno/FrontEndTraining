@@ -1,0 +1,33 @@
+<div class="container-fluid">
+
+
+  <div class="container bg-white shadow-sm p-5 mt-4">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="font-weight-light mb-4">List Products</h2>
+      </div>
+
+      <div class="col-md-12">
+
+        <table class="table">
+          <thead class="shadow-sm">
+            <tr>
+              <th scope="col">Sku</th>
+              <th scope="col">Product</th>
+              <th scope="col">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of products">
+              <td scope="row">{{ product.sku }}</td>
+              <td>{{ product.product}}</td>
+              <td>{{ product.price | currency }}</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+
+</div>
