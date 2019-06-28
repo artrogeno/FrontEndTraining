@@ -1,0 +1,54 @@
+<div class="container-fluid">
+
+  <div class="container bg-white shadow-sm p-5 mt-4">
+    <div class="row">
+      <div class="col-md-12 d-flex justify-content-between align-items-center mb-2">
+        <h2 *ngIf="create" class="font-weight-light mb-4">Create Product</h2>
+        <h2 *ngIf="!create" class="font-weight-light mb-4">Update Product</h2>
+        <a class="btn btn-outline-dark" [routerLink]="['/', 'products']">
+          <span class="fa fa-arrow-left"></span>
+          Back
+        </a>
+      </div>
+
+      <div class="col-md-12" *ngIf="msg">
+        <div class="alert alert-danger" *ngIf="msg.error">
+          {{ msg.message }}
+        </div>
+        <div class="alert alert-success" *ngIf="!msg.error && msg.message">
+          {{ msg.message }}
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <form  #form="ngForm" (ngSubmit)="onSubmit(form)" novalidate>
+          <div class="form-row">
+            <div class="col-4">
+              <input type="text" name="product" [(ngModel)]="product.product" class="form-control" placeholder="Product name">
+            </div>
+            <div class="col">
+              <input type="number" name="sku" [(ngModel)]="product.sku" class="form-control" placeholder="Sku">
+            </div>
+            <div class="col">
+              <input type="number" name="price" [(ngModel)]="product.price" class="form-control" placeholder="Price">
+            </div>
+            <div class="col">
+              <input type="number" name="sales" [(ngModel)]="product.sales" class="form-control" placeholder="Sales">
+            </div>
+            <div class="form-check col form-check-inline">
+              <input class="form-check-input" name="active" [(ngModel)]="product.active" type="checkbox" id="inputActive">
+              <label class="form-check-label text-muted" for="inputActive">Active</label>
+            </div>
+          </div>
+          <div class="form-row mt-3">
+            <div class="col">
+              <button *ngIf="create" type="submit" class="btn btn-outline-success">Create</button>
+              <button *ngIf="!create" type="submit" class="btn btn-outline-primary">Update</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
